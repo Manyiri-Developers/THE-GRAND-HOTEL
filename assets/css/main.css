@@ -443,6 +443,16 @@ h6 {
     opacity: 0.8;
   }
 }
+
+
+.slow-load {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slow-load[src]:not([src="/assets/img/mtwapa-resort-img/placeholder-grand-hotel (1).jpg"]) {
+  opacity: 1;
+}
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
