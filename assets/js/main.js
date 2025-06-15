@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  
+
 
   /**
    * Scroll top button
