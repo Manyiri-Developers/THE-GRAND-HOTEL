@@ -59,7 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopImmediatePropagation();
     });
   });
-
+  /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
   
 
   /**
