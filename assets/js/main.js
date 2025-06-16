@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopImmediatePropagation();
     });
   });
+
   /**
    * Initiate glightbox
    */
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selector: '.glightbox'
   });
   
+
 
   /**
    * Scroll top button
