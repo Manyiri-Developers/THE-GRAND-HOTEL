@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkOut,
         adults,
       children: children || '0', // Default to '0' if empty
-        children: children || '0', 
+        // children: children || '0', 
         name,
         email,
         phoneNumber: phone // No comma here
