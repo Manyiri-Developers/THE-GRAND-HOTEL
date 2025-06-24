@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loading.style.display = 'block';
 
     // Send data to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbx9ijbikVsGgPUR01jmE0g0gagivGVFgAw9uwenFks7goPrHeKxFTEM-C-5x4D8Bool/exec', { // Use /exec for production
+    fetch('https://script.google.com/macros/s/AKfycbxKEkaOqbCVsbR-yBOECfpEiNWB8YbcAxm2aVdgHehMZq-1-SNCsrqwvunt592NYnqe/exec', { // Use /exec for production
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
