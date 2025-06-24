@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         checkOut,
         adults,
       children: children || '0', // Default to '0' if empty
-        // children: children || '0', 
         name,
         email,
         phoneNumber: phone // No comma here
@@ -51,10 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json'
-        //  'Access-Control-Allow-Origin': '*',
-        // 'Access-Control-Allow-Methods': 'POST',
-        // 'Access-Control-Allow-Headers': 'Content-Type',
+
+         'Content-Type': 'application/json'
+
       }
     })
       .then(response => {
