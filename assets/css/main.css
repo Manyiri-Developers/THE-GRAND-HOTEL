@@ -2482,6 +2482,144 @@ section,
 
 
 /*--------------------------------------------------------------
+# Room Booking Section
+--------------------------------------------------------------*/
+.room-booking .container {
+  max-width: 1280px;
+}
+
+.room-booking .form-container {
+  background-color: var(--surface-color, #161c2a);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+  margin: 0 auto;
+}
+
+.room-booking .form-container h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--heading-color, #f2f8fe);
+  background: linear-gradient(120deg, var(--heading-color), color-mix(in srgb, var(--heading-color), var(--accent-color, #10a3d7) 30%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: 'Mukta', sans-serif;
+}
+
+.room-booking .form-container p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color, #e4edf5), transparent 15%);
+  margin-bottom: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.room-booking .form-container .form-floating {
+  margin-bottom: 20px;
+}
+
+.room-booking .form-container .form-floating .form-control,
+.room-booking .form-container .form-floating .form-select {
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--default-color, #e4edf5), transparent 80%);
+  padding: 24px 20px 8px 20px;
+  height: calc(3.5rem + 3px);
+  background-color: var(--surface-color, #161c2a);
+  color: var(--default-color, #e4edf5);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.room-booking .form-container .form-floating .form-control:focus,
+.room-booking .form-container .form-floating .form-select:focus {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color, #10a3d7), transparent 85%);
+  border-color: color-mix(in srgb, var(--accent-color, #10a3d7), transparent 40%);
+  background-color: var(--surface-color, #161c2a);
+}
+
+.room-booking .form-container .form-floating .form-control::placeholder,
+.room-booking .form-container .form-floating .form-select:invalid {
+  color: transparent;
+}
+
+.room-booking .form-container .form-floating label {
+  color: color-mix(in srgb, var(--default-color, #e4edf5), transparent 40%);
+  padding: 1rem 1.25rem 2.5rem 1.25rem;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.room-booking .form-container .form-floating label::after {
+  background-color: transparent;
+}
+
+.room-booking .form-container .btn-submit {
+  background: linear-gradient(145deg, var(--accent-color, #10a3d7), color-mix(in srgb, var(--accent-color, #10a3d7), #1a4372 30%));
+  color: var(--contrast-color, #ffffff);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Mukta', sans-serif;
+}
+
+.room-booking .form-container .btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px color-mix(in srgb, var(--accent-color, #10a3d7), transparent 75%);
+}
+
+.room-booking .form-container .btn-submit i {
+  transition: transform 0.3s ease;
+}
+
+.room-booking .form-container .btn-submit:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .room-booking .form-container {
+    padding: 30px 25px;
+  }
+
+  .room-booking .form-container h3 {
+    font-size: 24px;
+  }
+
+  .room-booking .form-container p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .room-booking .form-container {
+    padding: 25px 20px;
+  }
+
+  .room-booking .form-container .form-floating .form-control,
+  .room-booking .form-container .form-floating .form-select {
+    font-size: 13px;
+  }
+
+  .room-booking .form-container .form-floating label {
+    font-size: 13px;
+  }
+
+  .room-booking .form-container .btn-submit {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
