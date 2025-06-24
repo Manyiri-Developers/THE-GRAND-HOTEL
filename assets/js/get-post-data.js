@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loading.style.display = 'block';
 
     // Send data to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbxKEkaOqbCVsbR-yBOECfpEiNWB8YbcAxm2aVdgHehMZq-1-SNCsrqwvunt592NYnqe/exec', { // Use /exec for production
+    // Use http://localhost:3001/api/book for local testing
+
+    fetch('https://grandhotel-proxy.vercel.app/api/book ', { // Use /vercel link for production
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
