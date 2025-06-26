@@ -1,5 +1,6 @@
 <!--
 Template Name: Grand Hotel
+
 Author: Manyiri Developers
 Inspired by: BootstrapMade and Dribbble
 Photos by: Pexels
@@ -56,7 +57,7 @@ Contact Manyiri Developers for full project implementation including:
     <!-- <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Abel:wght@400&display=swap" rel="stylesheet"> -->
-
+    
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
@@ -71,11 +72,17 @@ Contact Manyiri Developers for full project implementation including:
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!--intl-tel-input Validating International phone numbers-->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/build/css/intlTelInput.min.css" integrity="sha512-X3pJz9m4oT4uHCYS6UjxVdWk1yxSJJIJOJMIkf7TjPpb1BzugjiFyHu7WsXQvMMMZTnGUA9Q/GyxxCWNDZpdHA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Abel:wght@400&display=swap" rel="stylesheet">
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/css/intlTelInput.min.css"> -->
+     <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Abel:wght@400&display=swap" rel="stylesheet">
+      
+    <!---All countries dropdown booking form-->
+      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 
   <!-- Main CSS File -->
@@ -189,11 +196,44 @@ Contact Manyiri Developers for full project implementation including:
                 <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
                 <label for="email">Email Address</label>
               </div>
+               <!-- <div class="col-4">
+              <div class="form-floating">
+                <select class="form-control" id="countryCode" name="country_code" required>
+                  <option value="" disabled selected>Country Code</option>
+                  <option value="+254">Kenya (+254)</option>
+                  <option value="+31">Netherlands (+31)</option>
+                  <option value="+1">United States (+1)</option>
+                  
+                </select>
+                <label for="countryCode">Country Code</label>
+              </div>
+            
 
               <div class="form-floating mb-3">
                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
                 <label for="phone">Phone Number</label>
-              </div>
+              </div> -->
+        <div class="row g-3 mb-3">
+          <div class="col-4">
+            <div class="form-floating">
+              <select class="form-control" id="countryCode" name="country_code" required>
+                <option value="" disabled selected>Country Code</option>
+                <option value="+254">Kenya (+254)</option>
+                <option value="+31">Netherlands (+31)</option>
+                <option value="+1">United States (+1)</option>
+                <!-- Add other dynamically-->
+              </select>
+              <label for="countryCode">Country Code</label>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="form-floating">
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{9,10}" required>
+              <label for="phone">Phone Number</label>
+            </div>
+          </div>
+        </div>
+
 
               <div class="my-3">
                 <div class="loading" style="display: none;">Submitting...</div>
@@ -296,8 +336,14 @@ All libraries are sourced via public CDNs.
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  
-
+  <!--intl-tel-input Validating International phone numbers-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/build/js/intlTelInput.min.js" integrity="sha512-SlsU65KdLej2skQ24jI+POL40KCeJ7aR9dy6lhT6ZUggKQeoqq6Lj+7n6i8zqO2gcelYQBPgOdrtIwDXF6cLIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/js/intlTelInput.min.js"></script> -->
+ 
+  <!--All countries codes-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -305,7 +351,9 @@ All libraries are sourced via public CDNs.
   <script src="assets/js/slow-loading.js"></script>
    <script src="assets/js/get-post-data.js"></script>
   
-
+<!-- Notification Div (add before </body>) -->
+<div id="notification" class="notification hidden"></div>
 </body>
+
 
 </html>

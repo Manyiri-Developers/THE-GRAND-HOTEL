@@ -1,0 +1,10 @@
+1. New date to string is ot giving the correct date
+
+2. Learn about reporting to managers from the google sheet with appscript
+
+3. Learn how a room type clicked on home page can triger a swiper slide which
+  will be inserted at he bottom of the booking form to show room interior.
+
+
+4. Phone numbers don't have Country codes
+=DONE
