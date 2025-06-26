@@ -105,7 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('https://grandhotel-proxy.vercel.app/api/book ', { // Update to Vercel URL for production
       method: 'POST',
       body: JSON.stringify(data),
+
       headers: { 'Content-Type': 'application/json' }
+
     })
       .then(response => {
         if (!response.ok) {
