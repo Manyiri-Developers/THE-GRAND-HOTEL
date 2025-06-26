@@ -2479,6 +2479,77 @@ section,
     flex-wrap: wrap;
   }
 }
+.form-floating input[type="date"] {
+  padding-right: 40px; /* Space for icon */
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231a4372"%3E%3Cpath d="M17 3h4a1 1 0 011 1v16a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1h4V1h2v2h6V1h2v2zM4 9v10h16V9H4zm2 2h2v2H6v-2zm0 4h2v2H6v-2zm4 0h2v2h-2v-2zm4-4h2v2h-2v-2z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 24px;
+}
+.form-floating input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1; /* Ensure icon is visible */
+  filter: invert(20%) sepia(50%) saturate(2000%) hue-rotate(200deg); /* Match --accent-color */
+}
+.form-floating input[type="date"]:focus {
+  background-image: none; /* Hide custom icon on focus to show native picker */
+}
+
+
+/*******************************
+ 
+     Notification Styles
+ 
+ 
+ ************************** */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 320px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: var(--heading-font), sans-serif; /* Montserrat */
+  font-size: 16px;
+  line-height: 1.5;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.notification.success {
+  background-color: #28a745; /* Green for success */
+  color: var(--contrast-color); /* #ffffff */
+  border-left: 4px solid var(--accent-color); /* #106eea */
+}
+
+.notification.error {
+  background-color: #dc3545; /* Red for error */
+  color: var(--contrast-color); /* #ffffff */
+  border-left: 4px solid #b02a37; /* Darker red */
+}
+
+.notification.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification.hidden {
+  display: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .notification {
+    top: 10px;
+    right: 10px;
+    max-width: 90%;
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+}
+
 
 
 /*--------------------------------------------------------------
