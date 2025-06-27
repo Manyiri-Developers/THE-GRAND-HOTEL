@@ -73,16 +73,16 @@ Contact Manyiri Developers for full project implementation including:
     <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!--intl-tel-input Validating International phone numbers-->
-     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/build/css/intlTelInput.min.css" integrity="sha512-X3pJz9m4oT4uHCYS6UjxVdWk1yxSJJIJOJMIkf7TjPpb1BzugjiFyHu7WsXQvMMMZTnGUA9Q/GyxxCWNDZpdHA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/build/css/intlTelInput.min.css" integrity="sha512-X3pJz9m4oT4uHCYS6UjxVdWk1yxSJJIJOJMIkf7TjPpb1BzugjiFyHu7WsXQvMMMZTnGUA9Q/GyxxCWNDZpdHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/css/intlTelInput.min.css"> -->
+     
      <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Abel:wght@400&display=swap" rel="stylesheet">
       
     <!---All countries dropdown booking form-->
-      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+      <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
 
 
   <!-- Main CSS File -->
@@ -216,13 +216,8 @@ Contact Manyiri Developers for full project implementation including:
         <div class="row g-3 mb-3">
           <div class="col-4">
             <div class="form-floating">
-              <select class="form-control" id="countryCode" name="country_code" required>
-                <option value="" disabled selected>Country Code</option>
-                <option value="+254">Kenya (+254)</option>
-                <option value="+31">Netherlands (+31)</option>
-                <option value="+1">United States (+1)</option>
-                <!-- Add other dynamically-->
-              </select>
+              <input type="tel" class="form-control" id="countryCode" name="country_code" required>
+            </iput>
               <label for="countryCode">Country Code</label>
             </div>
           </div>
@@ -337,9 +332,9 @@ All libraries are sourced via public CDNs.
    <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <!--intl-tel-input Validating International phone numbers-->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/build/js/intlTelInput.min.js" integrity="sha512-SlsU65KdLej2skQ24jI+POL40KCeJ7aR9dy6lhT6ZUggKQeoqq6Lj+7n6i8zqO2gcelYQBPgOdrtIwDXF6cLIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/js/intlTelInput.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/build/js/intlTelInput.min.js" integrity="sha512-SlsU65KdLej2skQ24jI+POL40KCeJ7aR9dy6lhT6ZUggKQeoqq6Lj+7n6i8zqO2gcelYQBPgOdrtIwDXF6cLIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+  
  
   <!--All countries codes-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
