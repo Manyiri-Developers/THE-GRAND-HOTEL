@@ -1,19 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const checkInOutEl = document.getElementById('checkInOut');
+  const checkInEl = document.getElementById('checkIn');
+const checkOutEl = document.getElementById('checkOut');
   const roomTypeEl = document.getElementById('roomType');
   const banner = document.getElementById('availability-banner');
   const loadingIndicator = document.getElementById('loading-indicator');
   const apiUrl = 'https://grandhotel-proxy-hnllqgo16-timothy-mwaros-projects.vercel.app/api/availability';
 
-  // Initialize Flatpickr
-  const flatpickrInstance = flatpickr(checkInOutEl, {
-    mode: 'range',
+  
+    const checkInPicker = flatpickr(checkInEl, {
     dateFormat: 'Y-m-d',
     minDate: 'today',
     disable: [],
     onChange(selectedDates) {
-      if (selectedDates.length === 2) {
-        checkAvailability(selectedDates[0], selectedDates[1]);
+      if (selectedDates.length > 0) {
+        checkOutPicker.set('minDate', selectedDates[0]);
+        if (checkOutEl.value) {
+          checkAvailability(new Date(checkInEl.value), new Date(checkOutEl.value));
+        }
+      }
+    },
+    onOpen: updateDisabledDates
+  });
+
+  const checkOutPicker = flatpickr(checkOutEl, {
+    dateFormat: 'Y-m-d',
+    minDate: 'today',
+    disable: [],
+    onChange(selectedDates) {
+      if (selectedDates.length > 0 && checkInEl.value) {
+        checkAvailability(new Date(checkInEl.value), new Date(checkOutEl.value));
       }
     },
     onOpen: updateDisabledDates
@@ -28,7 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
       updateDisabledDates();
       updateBanner();
     } else {
-      flatpickrInstance.set('disable', []);
+      // flatpickrInstance.set('disable', []);
+      checkInPicker.set('disable', []);
+      checkOutPicker.set('disable', []);
       showBanner('Select a room type to see availability.', 'info');
     }
   });
@@ -45,7 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!roomData) {
         showBanner(`No data found for ${roomTypeEl.value}.`, 'danger');
-        flatpickrInstance.set('disable', []);
+        // flatpickrInstance.set('disable', []);
+        checkInPicker.set('disable', []);
+      checkOutPicker.set('disable', []);
         return;
       }
 
@@ -77,7 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      flatpickrInstance.set('disable', disableRanges);
+      // flatpickrInstance.set('disable', disableRanges);
+      checkInPicker.set('disable', disableRanges);
+      checkOutPicker.set('disable', disableRanges);
       showBanner(
         roomData.remaining > 0
           ? `${roomData.remaining} ${roomData.roomType} available.`
@@ -87,7 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       console.error('Error in updateDisabledDates:', error);
       showBanner('Failed to load availability. Please try again.', 'danger');
-      flatpickrInstance.set('disable', []);
+      // flatpickrInstance.set('disable', []);
+      checkInPicker.set('disable', []);
+      checkOutPicker.set('disable', []);
     } finally {
       setLoadingState(false);
     }
@@ -206,7 +229,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setLoadingState(isLoading) {
     roomTypeEl.disabled = isLoading;
-    checkInOutEl.disabled = isLoading;
+    // checkInOutEl.disabled = isLoading;
+    checkInEl.disabled = isLoading;
+checkOutEl.disabled = isLoading;
     loadingIndicator.classList.toggle('d-none', !isLoading);
   }
 });
