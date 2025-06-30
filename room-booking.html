@@ -137,6 +137,8 @@ Contact Manyiri Developers for full project implementation including:
           <div id="availability-banner" class="text-center bg-white-100 border border-white-400 rounded p-4 my-4 text-sm"></div>
 
     </div><!-- End Section Title -->
+     
+
 
     <div class="container">
       <div class="row justify-content-center">
@@ -144,7 +146,17 @@ Contact Manyiri Developers for full project implementation including:
           <div class="form-container" data-aos="fade-up" data-aos-delay="200">
             <h3>Room Booking Form</h3>
             <p>Reserve your perfect room for an unforgettable stay.</p>
+
             <form id="booking-form" class="emailjs-form">
+              <div class="form-floating mb-3">
+                <div id="loading-indicator" class="d-none spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div id="availability-banner" class="alert alert-info text-center d-none mt-3" role="alert">
+                  Select a room type to see availability.
+                </div>
+              </div>
+              
               <div class="form-floating mb-3">
                 <select class="form-control" id="roomType" name="room_type" required>
                   <option value="" disabled selected>Select Room Type</option>
@@ -332,6 +344,9 @@ All libraries are sourced via public CDNs.
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!--FlatPickr Dates-->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <!--intl-tel-input Validating International phone numbers-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.1/build/js/intlTelInput.min.js" integrity="sha512-SlsU65KdLej2skQ24jI+POL40KCeJ7aR9dy6lhT6ZUggKQeoqq6Lj+7n6i8zqO2gcelYQBPgOdrtIwDXF6cLIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  
@@ -346,7 +361,7 @@ All libraries are sourced via public CDNs.
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/slow-loading.js"></script>
    <script src="assets/js/get-post-data.js"></script>
-  
+ 
 <!-- Notification Div (add before </body>) -->
 <div id="notification" class="notification hidden"></div>
 </body>
