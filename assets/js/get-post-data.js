@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+//Website Intergration
+async function updateAvailabilityBanner() {
+  const response = await fetch('https://grandhotel-proxy.vercel.app/api/availability');
+  const data = await response.json();
+  document.getElementById('availability-banner').innerText = data.map(room => `${room.remaining} ${room.roomType} Available`).join(' | ');
+}
+
+document.addEventListener('DOMContentLoaded', updateAvailabilityBanner);
+
+
   const form = document.getElementById('booking-form');
   const loading = document.querySelector('.loading');
   const errorMessage = document.querySelector('.error-message');
