@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener('DOMContentLoaded', () => {
   const checkInEl = document.getElementById('checkIn');
   const checkOutEl = document.getElementById('checkOut');
