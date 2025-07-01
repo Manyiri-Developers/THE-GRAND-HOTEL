@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+const BASE_URL = 'https://grandhotel-proxy-hnllqgo16-timothy-mwaros-projects.vercel.app';
 //Website Intergration
 async function updateAvailabilityBanner() {
-  const response = await fetch('https://grandhotel-proxy-hnllqgo16-timothy-mwaros-projects.vercel.app/api/availability');
+  const response = await fetch(`${BASE_URL}/api/availability`);
   const data = await response.json();
   document.getElementById('availability-banner').innerText = data.map(room => `${room.remaining} ${room.roomType} Available`).join(' | ');
 }
@@ -153,7 +154,7 @@ document.addEventListener('DOMContentLoaded', updateAvailabilityBanner);
 
   console.log('Sending data to proxy:', data);
   
-    fetch('https://grandhotel-proxy.vercel.app/api/book', { // Update to Vercel URL for production
+    fetch (`${BASE_URL}/api/book`, { // Update to Vercel URL for production
       method: 'POST',
       body: JSON.stringify(data),
 
