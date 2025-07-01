@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Website Intergration
 async function updateAvailabilityBanner() {
-  const response = await fetch('https://grandhotel-proxy.vercel.app/api/availability');
+  const response = await fetch('https://grandhotel-proxy-hnllqgo16-timothy-mwaros-projects.vercel.app/api/availability');
   const data = await response.json();
   document.getElementById('availability-banner').innerText = data.map(room => `${room.remaining} ${room.roomType} Available`).join(' | ');
 }
