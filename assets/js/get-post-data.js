@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //   document.getElementById('availability-banner').innerText = data.map(room => `${room.remaining} ${room.roomType} Available`).join(' | ');
 // }
 
-document.addEventListener('DOMContentLoaded', updateAvailabilityBanner);
+// document.addEventListener('DOMContentLoaded', updateAvailabilityBanner);
 
 
   const form = document.getElementById('booking-form');
