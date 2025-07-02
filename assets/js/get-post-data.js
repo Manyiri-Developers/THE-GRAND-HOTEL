@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const BASE_URL = 'https://grandhotel-proxy-hnllqgo16-timothy-mwaros-projects.vercel.app';
+
+// Use this when testing locally http://localhost:3001/api/book
+// const BASE_URL = 'http://localhost:3001/api/book';
+
 //Website Intergration
 async function updateAvailabilityBanner() {
+  const BASE_URL = 'https://grandhotel-proxy-hnllqgo16-timothy-mwaros-projects.vercel.app';
   const response = await fetch(`${BASE_URL}/api/availability`);
+  console.log(`${BASE_URL}/api/availability`);
   const data = await response.json();
   document.getElementById('availability-banner').innerText = data.map(room => `${room.remaining} ${room.roomType} Available`).join(' | ');
 }
